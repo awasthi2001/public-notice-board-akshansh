@@ -5,7 +5,7 @@ let URL = process.env.MONGO_URL
 export const connectDB = () => {
     try {
         return new Promise((resolve, reject) =>{
-            mongoose.connect(URL,(err)=>{
+            mongoose.connect(URL,(err)=>{ 
                 if(err){
                     reject("Something went wrong");
                 } else {      
