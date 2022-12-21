@@ -1,9 +1,11 @@
 import mongoose from "mongoose"
-
+import * as dotenv from 'dotenv'
+dotenv.config();
+let URL = process.env.MONGO_URL
 export const connectDB = () => {
     try {
         return new Promise((resolve, reject) =>{
-            mongoose.connect('mongodb://127.0.0.1:27017/PublicNotice',(err)=>{
+            mongoose.connect(URL,(err)=>{
                 if(err){
                     reject("Something went wrong");
                 } else {      
