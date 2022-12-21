@@ -36,6 +36,7 @@ export const Notice = () => {
                 }
             })
             fetchAndUpdate();
+            setinputnotice('');
         }
     }
     useEffect(()=>{
