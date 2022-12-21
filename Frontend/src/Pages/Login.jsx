@@ -9,7 +9,7 @@ export const Login = () => {
      setusername(e.target.value);
     }
     let postdata = async(userdata)=>{
-        let res = await fetch('http://localhost:8080/login',{
+        let res = await fetch('https://public-notice-board.onrender.com/login',{
             method: 'POST',
             body : JSON.stringify(userdata),
             headers:{
